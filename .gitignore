@@ -1,0 +1,11 @@
+*.root
+*.pkl
+.ipynb_checkpoints
+*.pyc
+exe
+*~
+*.o
+*.out
+*.err
+*.png
+
