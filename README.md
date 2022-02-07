@@ -2,6 +2,9 @@
 
 BGO saturation correction using convolutional neural networks
 
+Method is explained in details here:
+https://arxiv.org/abs/2201.12185
+
 * INSTALLATION:
 
 1. Prerequirements : 
