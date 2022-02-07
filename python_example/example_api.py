@@ -1,21 +1,19 @@
 import sys
 import os
-sys.path.append(os.environ["DAMPEBGOAPI"] + 'api/python')
 
-from dampe_bgo_sat_api import DampeApi 
+from dampe_bgo_sat_api import DampeBgoApi 
 
 
 # ============== IMPORTANT ===============
 # Import ROOT libraries only AFTER the API
 # ============== IMPORTANT ===============
 from ROOT import *
-import dampe_bgo
 
 # load DAMPE library
 gSystem.Load("libDmpEvent.so")
 
 # create the API object
-api = DampeApi()
+api = DampeBgoApi()
 
 # Open DAMPE .root file, get the tree, create DAMPE objects 
 f = TFile(sys.argv[1])
@@ -35,16 +33,27 @@ for i in range(t.GetEntries()):
     # saturation never happens for events below several 1TeV
     if bgorec.GetTotalEnergy() < 1e6: continue
 
-    api.Predict()
+    # You must specify for which ion do you require the prediction
+    api.Predict(Z=2)
 
-    print ("  ML BGO energy = {:.2f} TeV".format(api.GetReconstructedBGOE() / 1e6))
     if api.IsSaturated():
-        print ("\t\t number of saturated bars = {}, {}, {}".format(
-            int(api.IsSaturated_last_layer()),
-            api.n_sat_bars_mid(),
-            api.n_sat_bars_adjacent()
-              ))
+        print ("################# - NEW SATURATED EVENT - #################")
+        print ("BGO energy without saturation correction: {}".format(bgorec.GetTotalEnergy()))
+        print ("Number of saturated bars:\n" + 
+               "\tLast layer : {}\n".format(int(api.IsSaturated_last_layer())) +
+               "\tMiddle     : {}\n".format(api.n_sat_bars_mid()) + 
+               "\tAdjacent  : {}".format(api.n_sat_bars_adjacent()))
+
+        print("Prediction as if it is helium : {}".format(api.GetReconstructedBGOE()))
+
+        # You can call api.Predict several times, if you want to get
+        # prediction for different ions
+        api.Predict(Z=1)
+        print("Prediction as if it is proton : {}".format(api.GetReconstructedBGOE()))
+
+        api.Predict(Z=6)
+        print("Prediction as if it is carbon : {}".format(api.GetReconstructedBGOE()))
 
     
 # Example:
-#  python example.py `cat test_skim.txt`
+#  python example_without_api.py `head -1 test_skim.txt`

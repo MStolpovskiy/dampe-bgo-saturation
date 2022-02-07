@@ -1,0 +1,10 @@
+/beegfs/dampe/prod/FM/skim/6.0.0/v2/2016/07/03_data_500_000.root
+/beegfs/dampe/prod/FM/skim/6.0.0/v2/2016/07/12_data_500_000.root
+/beegfs/dampe/prod/FM/skim/6.0.0/v2/2016/07/10_data_500_000.root
+/beegfs/dampe/prod/FM/skim/6.0.0/v2/2016/07/14_data_500_000.root
+/beegfs/dampe/prod/FM/skim/6.0.0/v2/2016/07/05_data_500_000.root
+/beegfs/dampe/prod/FM/skim/6.0.0/v2/2016/07/27_data_500_000.root
+/beegfs/dampe/prod/FM/skim/6.0.0/v2/2016/07/28_data_500_000.root
+/beegfs/dampe/prod/FM/skim/6.0.0/v2/2016/07/20_data_500_000.root
+/beegfs/dampe/prod/FM/skim/6.0.0/v2/2016/07/07_data_500_000.root
+/beegfs/dampe/prod/FM/skim/6.0.0/v2/2016/07/29_data_500_000.root

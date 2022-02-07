@@ -20,6 +20,7 @@ endif
 #------------------------------------------------------------------------------
 
 CXXFLAGS += -std=c++14 -Wextra -Wshadow -Wnon-virtual-dtor -pedantic
+CXXFLAGS += -I/cvmfs/dampe.cern.ch/centos7/opt/conda_python2.7_tensorflow/include/python2.7 -L/cvmfs/dampe.cern.ch/centos7/opt/conda_python2.7_tensorflow/lib -lpython2.7 -lssl -lPyROOT
 CXXFLAGS += -I $(DMPSWSYS)/include
 CXXFLAGS += -I include
 
@@ -30,7 +31,7 @@ LIBS += -lTMVA -lXrdProofd
 
 SrcSuf := cpp
 ObjSuf := o
-IncSuf := hpp
+IncSuf := h
 
 MYLIBDS := source
 MYLIBDO := obj

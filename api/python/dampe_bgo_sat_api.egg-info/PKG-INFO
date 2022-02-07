@@ -1,0 +1,14 @@
+Metadata-Version: 1.0
+Name: dampe-bgo-sat-api
+Version: 1.0
+Summary: Python API to apply the CNN models for the BGO saturation
+Home-page: UNKNOWN
+Author: M. Stolpovskiy
+Author-email: mikhail.stolpovskiy@unige.ch
+License: UNKNOWN
+Description: # installation:
+        
+        pip install -e .
+        
+        where -e option makes the package editable (useful for developing purposes). When you change the package it's content becomes immediately updated with your recent changes.
+Platform: UNKNOWN
