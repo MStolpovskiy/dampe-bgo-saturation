@@ -18,5 +18,3 @@ source compile.sh
 * Run with 
 
 ./example `head -1 test_skim.txt`
-
-* Don't forget to fix the paths to the python installation both in setup.sh and compile.sh

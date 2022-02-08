@@ -14,8 +14,6 @@ on top of sourcing the setup.sh
 
 source compile.sh
 
-Fix the paths to the python installation in compile.sh
-
 * Run as
 
 ./example test_skim.txt test_skim.root 100

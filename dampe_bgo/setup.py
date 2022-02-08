@@ -14,5 +14,5 @@ setup(
     author = "M. Stolpovskiy",
     author_email = "mikhail.stolpovskiy@unige.ch",
     description = "Python functions to get the CNN prediction for the BGO saturation",
-    long_description=read('README'),
+    long_description=read('README.md'),
 )

@@ -14,5 +14,5 @@ setup(
     author = "M. Stolpovskiy",
     author_email = "mikhail.stolpovskiy@unige.ch",
     description = "Python API to apply the CNN models for the BGO saturation",
-    long_description=read('README'),
+    long_description=read('README.md'),
 )
