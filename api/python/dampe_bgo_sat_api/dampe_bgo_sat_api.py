@@ -48,7 +48,7 @@ class DampeBgoApi():
         This is done only once
         '''
         if not self.model_initialized:
-            path = os.environ["DAMPEBGOAPI"] + 'ml/'
+            path = os.environ["DAMPEBGOAPI"] + '/ml/'
             self.model_ll_p = load_model(path + 'saturation_model_ll_p_tf2.0.h5')
             self.model_mid_p = load_model(path + 'saturation_model_mid_p_tf2.0.h5')
             self.model_ll_he = load_model(path + 'saturation_model_ll_he_tf2.0.h5')

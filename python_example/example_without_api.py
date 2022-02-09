@@ -6,14 +6,10 @@ Run this example as:
 python example_without_api.py `head -1 test_skim.txt`
 '''
 from tensorflow.keras.models import load_model
-
-# ============== IMPORTANT ===============
-# Import ROOT libraries only AFTER the API
-# ============== IMPORTANT ===============
 from ROOT import *
 import sys
 import os
-import dampe_bgo
+import dampe_bgo # import only after tensorflow!
 
 # load DAMPE library
 gSystem.Load("libDmpEvent.so")
@@ -29,7 +25,7 @@ bgorec = DmpEvtBgoRec()
 t.SetBranchAddress("DmpEvtBgoRec", bgorec);
 
 # Load ML models
-path = os.environ['DAMPEBGOAPI'] + 'ml/'
+path = os.environ['DAMPEBGOAPI'] + '/ml/'
 model_ll_p = load_model(path + 'saturation_model_ll_p_tf2.0.h5')
 model_mid_p = load_model(path + 'saturation_model_mid_p_tf2.0.h5')
 
