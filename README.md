@@ -21,6 +21,8 @@ the setup scripts of this package).
 
 source setup.sh
 
+dampe_init
+
 3. Install python dampe_bgo package
 
 cd dampe_bgo
@@ -38,4 +40,11 @@ make # build the C++ api library
 
 * USAGE:
 
-Run 'source setup.sh' before each use. Don't use root or dampe_init before setup.sh. See usage examples in the corresponding folders
+Do 
+
+source setup.sh
+dampe_init
+
+before each use. Don't use root or dampe_init before setup.sh. The setup script can be sourced from any path, you don't have to navigate first to dampe-bgo-saturation folder. But don't move setup.sh anywhere, it must stay where it is.
+
+See usage examples in the corresponding folders
