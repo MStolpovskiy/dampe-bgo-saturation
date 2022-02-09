@@ -1,6 +1,0 @@
-README
-setup.py
-dampe_bgo_sat_api.egg-info/PKG-INFO
-dampe_bgo_sat_api.egg-info/SOURCES.txt
-dampe_bgo_sat_api.egg-info/dependency_links.txt
-dampe_bgo_sat_api.egg-info/top_level.txt

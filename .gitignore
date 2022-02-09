@@ -3,9 +3,11 @@
 .ipynb_checkpoints
 *.pyc
 exe
+example
 *~
 *.o
 *.out
 *.err
 *.png
-
+*.txt
+*.eff-info/
