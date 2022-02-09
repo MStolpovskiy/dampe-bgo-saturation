@@ -11,3 +11,5 @@ example
 *.png
 *.txt
 *.eff-info/
+*.a
+

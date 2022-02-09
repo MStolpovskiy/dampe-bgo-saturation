@@ -56,4 +56,4 @@ for i in range(t.GetEntries()):
 
     
 # Example:
-#  python example_without_api.py `head -1 test_skim.txt`
+#  python example_without_api.py <root file to analyse>

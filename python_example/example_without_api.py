@@ -72,4 +72,4 @@ for i in range(t.GetEntries()):
         print('BGO energy corrected:          {}'.format(bgoe))
     
 # Run this example:
-#  python example_without_api.py `head -1 test_skim.txt`
+#  python example_without_api.py <root file to analyse> 
